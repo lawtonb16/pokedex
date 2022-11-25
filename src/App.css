@@ -1,0 +1,9 @@
+.App {
+  padding-top: 4rem;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-color: #fafafa;
+}
+.navbar {
+  background-color: #ef5350 !important;
+}
