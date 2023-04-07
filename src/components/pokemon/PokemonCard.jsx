@@ -54,7 +54,7 @@ const PokemonCard = ({ pokemon }) => {
 
         axios.get(url).then((res) => {
             setImgUrl(res.data.sprites.front_default);
-            setPokemonIndex(res.data.order);
+            setPokemonIndex(res.data.id);
         });
         setName(capName);
     }, []);
@@ -69,9 +69,7 @@ const PokemonCard = ({ pokemon }) => {
                         </CardTitle>
 
                         {imgLoading && (
-                            <Spinner color="primary">
-                                Loading...
-                            </Spinner>
+                            <Spinner color="primary">Loading...</Spinner>
                         )}
                         <Sprite
                             className="card-img-top rounded mx-auto mt-2"

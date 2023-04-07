@@ -70,7 +70,7 @@ const Pokemon = () => {
                 }
                 return;
             }).flavor_text;
-            console.log(description);
+           
             setDescription(description);
             setGenderRatioFemale(res.data["gender_rate"] * 12.5);
             setGenderRatioMale((8 - res.data["gender_rate"]) * 12.5);

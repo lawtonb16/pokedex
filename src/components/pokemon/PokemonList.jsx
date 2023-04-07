@@ -4,12 +4,13 @@ import PokemonCard from "./PokemonCard";
 import axios from "axios";
 
 const PokemonList = () => {
-    const url = "https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0";
+    const url = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0";
     const [pokemon, setPokemon] = useState(null);
 
     useEffect(() => {
         axios.get(url).then((res) => {
             setPokemon(res.data.results);
+            console.log(pokemon)
         });
     }, []);
 
